@@ -116,6 +116,21 @@ td.actions a,td.actions button{margin-left:10px;padding:0}
     .store-nav .nav-links>a:last-child{border-bottom:0}
 }
 
+.media-title{gap:20px}.media-page-size label{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600}.media-page-size select{border:1px solid var(--line);background:#fff;padding:9px 12px;font:inherit}.media-result-bar{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;color:var(--muted);font-size:12px}.media-pagination nav[role=navigation]{margin-top:25px}.media-pagination nav[role=navigation]>div:first-child{display:none}.media-pagination nav[role=navigation]>div:last-child{display:flex;align-items:center;justify-content:space-between;gap:20px}.media-pagination nav[role=navigation] p{font-size:12px;color:var(--muted)}.media-pagination nav[role=navigation] span[aria-current] span{background:var(--green)!important;color:#fff!important;border-color:var(--green)!important}.media-pagination nav[role=navigation] a,.media-pagination nav[role=navigation] span{font-family:inherit!important}
+.dashboard-stats>a{display:block;min-width:0}.dashboard-stats article{height:100%;position:relative;transition:transform .2s,box-shadow .2s,border-color .2s}.dashboard-stats>a:hover article{transform:translateY(-3px);border-color:#b9d0bd;box-shadow:0 10px 25px #173f2b12}.dashboard-stats .stat-arrow{margin-left:auto;color:var(--leaf);font-size:13px;opacity:.55;transition:transform .2s}.dashboard-stats>a:hover .stat-arrow{opacity:1;transform:translateX(3px)}
+.store-search{align-items:stretch}.store-search input{height:100%;line-height:normal}.store-search button{align-self:stretch;display:flex;align-items:center;justify-content:center;padding:0;line-height:1}.store-search button i{display:block;margin:0;line-height:1}
+
+/* Keep the product catalogue inside the viewport at every breakpoint. */
+.catalog{grid-template-columns:210px minmax(0,1fr)}
+.catalog>section,.catalog .product-card,.catalog .product-body{min-width:0}
+.catalog .product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.catalog .product-price-row{min-width:0;flex-wrap:wrap;gap:4px 8px}
+.catalog .search.wide{max-width:100%}
+.catalog .search.wide input{min-width:0;max-width:100%}
+@media(max-width:900px){.catalog{grid-template-columns:minmax(0,1fr)}.catalog .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.catalog .search.wide{width:100%}.catalog .search.wide input{width:0;flex:1}.catalog aside{max-width:100%}}
+@media(max-width:560px){.media-title{align-items:stretch}.media-page-size label{justify-content:space-between}.media-result-bar{gap:10px}.media-pagination nav[role=navigation]>div:last-child{display:block}.media-pagination nav[role=navigation] p{margin-bottom:12px}}
+
 /* About page 2026 */
 .about-new-hero{background:linear-gradient(135deg,#f4f9ff,#eaf5ff 55%,#eef9f1);overflow:hidden}.about-new-hero-grid{min-height:555px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.about-kicker{display:inline-flex;align-items:center;gap:9px;color:#22723d;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px}.about-kicker i{color:#35a853}.about-new-copy h1{font:700 clamp(45px,5.4vw,68px)/1.12 Lora;margin:18px 0;color:#14345f}.about-new-copy h1 strong{color:#248b3e}.about-new-copy>p{max-width:620px;color:#586b82;font-size:15px;line-height:1.85}.about-actions{display:flex;align-items:center;gap:22px;margin-top:30px}.about-primary,.about-secondary{display:inline-flex;align-items:center;gap:11px;font-size:12px;font-weight:700}.about-primary{padding:15px 23px;border-radius:7px;background:#276fe5;color:white;box-shadow:0 10px 25px #276fe533}.about-secondary{color:#214d89}.about-new-visual{height:410px;position:relative;display:grid;place-items:center}.about-visual-main{width:310px;height:310px;border-radius:48% 52% 46% 54%;background:linear-gradient(145deg,#dff4e5,#cae9d5);display:grid;place-items:center;box-shadow:0 25px 70px #23773e1c}.about-visual-main:before{content:'';position:absolute;width:350px;height:350px;border:1px dashed #4b9c674d;border-radius:50%}.about-visual-main>i{font-size:125px;color:#279443;position:relative;filter:drop-shadow(0 12px 12px #16612920)}.about-floating-card{position:absolute;background:white;border:1px solid #e1ebf6;border-radius:12px;padding:14px 17px;display:flex;align-items:center;gap:12px;box-shadow:0 14px 35px #234c7c18}.about-floating-card>i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#edf7ff;color:#2770df;font-size:17px}.about-floating-card span{display:flex;flex-direction:column}.about-floating-card b{font-size:10px}.about-floating-card small{font-size:8px;color:var(--muted);margin-top:4px}.card-origin{left:0;top:55px}.card-quality{right:0;bottom:50px}.about-stats{border-top:1px solid #e4edf6;border-bottom:1px solid #e4edf6;background:white}.about-stats .container{display:grid;grid-template-columns:repeat(4,1fr)}.about-stats article{display:flex;align-items:center;justify-content:center;gap:15px;padding:25px 15px;border-right:1px solid #e4edf6}.about-stats article:last-child{border:0}.about-stats i{font-size:26px;color:#2871e5}.about-stats div{display:flex;flex-direction:column}.about-stats strong{color:#183f7b;font:700 22px Lora}.about-stats span{font-size:9px;color:var(--muted);margin-top:3px}.about-new-story{padding-top:90px;padding-bottom:90px;display:grid;grid-template-columns:.9fr 1.1fr;gap:85px;align-items:center}.about-story-visual{height:420px;background:linear-gradient(145deg,#e8f3ff,#d6eddf);border-radius:22px;position:relative;display:grid;place-items:center}.story-icon{width:180px;height:180px;border-radius:50%;background:#ffffffa8;display:grid;place-items:center}.story-icon i{font-size:92px;color:#2c9748}.about-story-visual>span{position:absolute;right:-20px;bottom:30px;padding:18px 22px;background:#f1782c;color:white;font:italic 17px Lora;box-shadow:0 12px 25px #9c491f28}.about-story-visual>span i{margin-right:7px}.about-story-content h2,.about-center-head h2{font:600 38px/1.3 Lora;color:#163760;margin:12px 0 18px}.about-story-content>p{color:#657487;font-size:13px;line-height:1.85}.about-checks{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:23px}.about-checks span{font-size:11px;font-weight:600;color:#315277}.about-checks i{color:#2ba14a;margin-right:6px}.about-mission{background:#153e79;padding:60px 0}.about-mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.about-mission article{position:relative;background:#fff;padding:32px 34px 32px 100px;border-radius:12px}.about-icon{width:54px;height:54px;border-radius:14px;background:#edf5ff;color:#2871e5;display:grid;place-items:center;font-size:23px}.about-mission .about-icon{position:absolute;left:28px;top:32px}.about-mission article>span{font-size:9px;color:#2b77e8;text-transform:uppercase;font-weight:700;letter-spacing:1.4px}.about-mission h3{font:600 22px/1.35 Lora;color:#173a68;margin:8px 0}.about-mission p{font-size:11px;line-height:1.75;color:var(--muted);margin-bottom:0}.about-values-new{padding-top:85px;padding-bottom:90px}.about-center-head{text-align:center;max-width:690px;margin:0 auto 38px}.about-center-head>p{font-size:12px;color:var(--muted);line-height:1.8}.about-value-new-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.about-value-new-grid article{border:1px solid #dfebf7;border-radius:12px;padding:25px;background:white;transition:.2s}.about-value-new-grid article:hover{transform:translateY(-5px);box-shadow:0 16px 36px #1d5ba815}.about-value-new-grid h3{font:600 18px Lora;color:#173b6b;margin:18px 0 9px}.about-value-new-grid p{font-size:10px;color:var(--muted);line-height:1.75;margin:0}.about-process-new{padding:75px 0 85px;background:#f5f9ff}.about-process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.about-process-grid article{position:relative;text-align:center;background:white;border:1px solid #deebf8;border-radius:13px;padding:30px 20px 25px}.about-process-grid article>b{position:absolute;left:15px;top:12px;color:#b5cbef;font-size:14px}.about-process-grid article>span{width:62px;height:62px;border-radius:50%;background:#edf4ff;color:#276fe4;display:grid;place-items:center;margin:auto;font-size:25px}.about-process-grid h3{font:600 17px Lora;color:#173a68;margin:15px 0 7px}.about-process-grid p{font-size:9px;color:var(--muted);line-height:1.75;margin:0}.about-new-cta{padding:58px 0;background:linear-gradient(125deg,#164da8,#2877eb);color:white}.about-new-cta .container{display:flex;align-items:center;justify-content:space-between;gap:40px}.about-new-cta span{font-size:9px;letter-spacing:1.6px;color:#c8ddff}.about-new-cta h2{font:600 31px Lora;margin:8px 0}.about-new-cta p{font-size:11px;color:#d7e6ff;margin:0}.about-new-cta .container>div:last-child{display:flex;align-items:center;gap:20px;white-space:nowrap}.about-new-cta a:first-child{padding:14px 20px;border-radius:6px;background:#f1762c;font-size:11px;font-weight:700}.about-new-cta a:last-child{font-size:11px;font-weight:700;border-bottom:1px solid #ffffff80}.about-new-cta a i{margin-left:8px}
 @media(max-width:900px){.about-new-hero-grid,.about-new-story{grid-template-columns:1fr}.about-new-hero-grid{padding:65px 0}.about-new-visual{height:350px}.about-stats .container,.about-value-new-grid,.about-process-grid{grid-template-columns:repeat(2,1fr)}.about-stats article:nth-child(2){border-right:0}.about-stats article:nth-child(-n+2){border-bottom:1px solid #e4edf6}.about-new-story{gap:45px}.about-mission-grid{grid-template-columns:1fr}.about-new-cta .container{align-items:flex-start;flex-direction:column}}
@@ -166,6 +181,10 @@ td.actions a,td.actions button{margin-left:10px;padding:0}
 .product-description-section .description.ck-content .image-style-side{float:right;max-width:50%;margin:0 0 1em 1.4em}
 .product-description-section .description.ck-content .image-style-align-left{float:left;max-width:50%;margin:0 1.4em 1em 0}
 .product-description-section .description.ck-content .image-style-align-center{margin-left:auto;margin-right:auto}
+.product-description-section .description.ck-content figure.image-style-block-align-left{margin-left:0;margin-right:auto}
+.product-description-section .description.ck-content figure.image-style-block-align-right{margin-left:auto;margin-right:0}
+.product-description-section .description.ck-content figure.image-style-align-left{margin-left:0;margin-right:auto}
+.product-description-section .description.ck-content figure.image-style-align-right{margin-left:auto;margin-right:0}
 .product-description-section .description.ck-content figure.table{display:block;width:100%;overflow-x:auto}
 .product-description-section .description.ck-content figure.table table{width:100%;table-layout:fixed;border-collapse:collapse}
 .product-description-section .description.ck-content figure.table th,.product-description-section .description.ck-content figure.table td{min-width:2em;padding:9px 11px;border:1px solid #ccd6ce;vertical-align:top;text-align:left}
@@ -226,4 +245,469 @@ td.actions a,td.actions button{margin-left:10px;padding:0}
     .process-grid article>i{font-size:13px}
     .process-grid h3{font-size:15px}
     .process-grid p{font-size:9px}
+}
+
+/* Keep every customer-facing call-to-action consistent with the logo orange. */
+.btn,
+.banner-copy .btn,
+.home-cta .btn,
+.about-primary,
+.about-new-cta a:first-child,
+.round-btn{
+    background:#ef7424;
+    color:#fff;
+    box-shadow:0 7px 18px #ef742438;
+}
+.btn:hover,
+.banner-copy .btn:hover,
+.home-cta .btn:hover,
+.about-primary:hover,
+.about-new-cta a:first-child:hover,
+.round-btn:hover{
+    background:#d85f16;
+    color:#fff;
+    box-shadow:0 10px 22px #b94e1640;
+}
+.store-assurances a{
+    background:#ef7424;
+    color:#fff;
+    box-shadow:0 7px 18px #ef742438;
+    transition:background .2s,transform .2s,box-shadow .2s;
+}
+.store-assurances a i{color:#fff}
+.store-assurances a:hover{
+    background:#d85f16;
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow:0 10px 22px #b94e1640;
+}
+
+/* Use one typeface throughout the storefront and administration screens. */
+body,
+body *:not(.fa):not(.fas):not(.far):not(.fal):not(.fab):not(.fa-solid):not(.fa-regular):not(.fa-brands){
+    font-family:'Be Vietnam Pro',sans-serif!important;
+}
+
+/* Unified, readable typography scale across all public pages. */
+:root{
+    --text-xs:13px;
+    --text-sm:13px;
+    --text-base:15px;
+    --text-lg:17px;
+}
+body{font-size:var(--text-base);line-height:1.65}
+.store-top{font-size:var(--text-xs)}
+.store-perks b,.store-nav .nav-links>a,.store-nav .category-menu{font-size:var(--text-sm)}
+.store-perks small{font-size:11px}
+.store-search input{font-size:var(--text-sm)}
+.eyebrow,.market-heading span,.news-grid small,.news-hero-card small,.article-card small{font-size:var(--text-xs)}
+.market-copy>p,.banner-copy p,.home-about-grid p,.about-new-copy>p,
+.about-story-content>p,.contact-grid>div>p,.lead,.description{font-size:var(--text-base)}
+.btn,.about-primary,.about-secondary,.about-new-cta a:first-child{font-size:14px}
+.market-heading h2{font-size:28px}
+.section h2,.story h2,.home-about-grid h2,.contact-grid h2,
+.about-story-content h2,.about-center-head h2{font-size:36px}
+.market-categories b{font-size:14px}
+.market-categories small{font-size:var(--text-xs);line-height:1.5}
+.market-products .product-body small,.latest-products-six .product-body small{font-size:10px}
+.market-products .product-body h3,.latest-products-six .product-body h3{font-size:15px;line-height:1.45}
+.market-products .product-price-row strong,.latest-products-six .product-price-row strong{font-size:16px}
+.market-products .product-unit,.latest-products-six .product-unit{font-size:11px}
+.process-grid h3{font-size:17px}
+.process-grid p,.home-news-grid p,.about-value-new-grid p,.about-process-grid p{font-size:var(--text-xs);line-height:1.7}
+.home-news-grid article>small{font-size:11px}
+.home-news-grid h3{font-size:19px}
+.home-cta span,.about-new-cta span{font-size:11px}
+.home-cta p,.about-new-cta p{font-size:var(--text-sm)}
+.store-assurances b{font-size:var(--text-sm)}
+.store-assurances small{font-size:11px}
+.footer-grid p,.footer-grid a{font-size:var(--text-sm)}
+.copyright{font-size:11px}
+.contact-form label,.login-card label:not(.check),.editor label:not(.check){font-size:var(--text-sm)}
+.contact-items b{font-size:var(--text-sm)}
+.contact-items span,.contact-items a{font-size:var(--text-base)}
+
+/* Keep administration screens compact, but no longer undersized. */
+.admin-body{font-size:14px}
+.admin-side nav a{font-size:13px}
+.admin-title p,.panel-head a{font-size:13px}
+table{font-size:13px}
+th{font-size:11px}
+.hint,td small{font-size:11px}
+
+@media(max-width:560px){
+    body{font-size:14px}
+    .section h2,.story h2,.home-about-grid h2,.contact-grid h2,
+    .about-story-content h2,.about-center-head h2{font-size:30px}
+    .market-heading h2{font-size:24px}
+    .store-assurances b{font-size:11px}
+    .store-assurances small{font-size:10px}
+    .footer-grid p,.footer-grid a{font-size:11px}
+}
+
+/* One shared treatment for the three “Xem tất cả” actions on the homepage. */
+.market-heading>a.home-view-all,
+.latest-products-heading>a.home-view-all,
+.home-news .market-heading>a.home-view-all{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-width:116px;
+    height:38px;
+    padding:0 17px;
+    border:1px solid var(--leaf);
+    border-radius:20px;
+    color:var(--leaf);
+    background:#fff;
+    font-size:13px;
+    line-height:1;
+    font-weight:700;
+    white-space:nowrap;
+}
+.market-heading>a.home-view-all i,
+.latest-products-heading>a.home-view-all i,
+.home-news .market-heading>a.home-view-all i{font-size:12px}
+@media(max-width:560px){
+    .market-heading>a.home-view-all,
+    .latest-products-heading>a.home-view-all,
+    .home-news .market-heading>a.home-view-all{
+        min-width:104px;
+        height:36px;
+        padding:0 14px;
+        font-size:12px;
+    }
+}
+
+/* Match the news listing typography to the homepage news section. */
+.page-hero p{font-size:15px;line-height:1.75}
+.news-hero-card small,
+.article-card small{font-size:13px}
+.news-hero-card p{font-size:15px;line-height:1.75}
+.article-card h3{font-size:19px;line-height:1.4}
+.article-card p{font-size:13px;line-height:1.7}
+.news-hero-card .read-more,
+.article-card .read-more{font-size:13px}
+
+@media(max-width:560px){
+    .page-hero p{font-size:14px}
+    .news-hero-card h2{font-size:28px;line-height:1.3}
+    .news-hero-card p{font-size:14px}
+    .news-hero-card small,
+    .article-card small{font-size:11px}
+    .article-card h3{font-size:19px}
+    .article-card p,
+    .news-hero-card .read-more,
+    .article-card .read-more{font-size:13px}
+}
+
+.store-assurances small{font-size:13px}
+
+/* Increase discount and featured product badges by 2px everywhere. */
+.product-image em,
+.market-products .product-image em{font-size:10px}
+.latest-products-six .product-image em{font-size:13px}
+
+/* Preserve CKEditor image alignment when rendering news articles. */
+.post-content figure.image{max-width:100%;margin:1.5em auto}
+.post-content figure.image img{display:block;width:100%;height:auto}
+.post-content figure.image.image-style-align-center{margin-left:auto;margin-right:auto}
+.post-content figure.image.image-style-block-align-left{margin-left:0;margin-right:auto}
+.post-content figure.image.image-style-block-align-right{margin-left:auto;margin-right:0}
+.post-content figure.image figcaption{text-align:center}
+
+/* CKEditor paragraph spacing presets for products and news posts. */
+.ck-content p.line-spacing-compact{line-height:1.35}
+.ck-content p.line-spacing-relaxed{line-height:1.5}
+.ck-content p.line-spacing-loose{line-height:2}
+
+/* Respect table alignment selected from CKEditor table properties. */
+.ck-content figure.table.table-style-align-left{
+    float:left;
+    width:auto;
+    max-width:100%;
+    margin:0 1.5em 1em 0;
+}
+.ck-content figure.table.table-style-align-right{
+    float:right;
+    width:auto;
+    max-width:100%;
+    margin:0 0 1em 1.5em;
+}
+.ck-content figure.table.table-style-align-center{
+    width:auto;
+    max-width:100%;
+    margin:1.4em auto;
+}
+.ck-content figure.table.table-style-block-align-left{
+    width:auto;
+    max-width:100%;
+    margin-left:0;
+    margin-right:auto;
+}
+.ck-content figure.table.table-style-block-align-right{
+    width:auto;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:0;
+}
+.ck-content:after{display:block;clear:both;content:''}
+
+@media(max-width:900px){
+    .mobile-nav-label{
+        margin-right:0;
+        margin-left:auto;
+        gap:0;
+    }
+    .store-nav .menu-toggle{
+        margin-left:4px;
+        padding-left:8px;
+        width:42px;
+    }
+}
+
+/* Prevent long category/origin labels from changing product-card alignment. */
+.latest-products-six .product-body>small,
+.product-card .product-body>small{
+    display:block;
+    width:100%;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    line-height:1.4;
+}
+.market-products .product-body>small{display:none}
+
+/* Reserve two full lines for featured product names before the price row. */
+.market-products .product-body h3{
+    display:-webkit-box;
+    height:44px;
+    margin:0 0 10px;
+    overflow:hidden;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    line-clamp:2;
+    font-size:15px;
+    line-height:1.45;
+}
+
+.about-checks span{font-size:14px;line-height:1.5}
+.about-checks i{font-size:14px}
+.home-about-points small{font-size:13px;line-height:1.5}
+
+/* Balanced CTA and assurance layout on phones. */
+@media(max-width:560px){
+    .home-cta{padding:44px 0}
+    .home-cta .container{
+        align-items:center;
+        gap:28px;
+        text-align:center;
+    }
+    .home-cta .container>div:first-child{width:100%}
+    .home-cta .container>div:last-child{
+        display:flex;
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        gap:14px;
+    }
+    .home-cta .container>div:last-child>a{
+        display:inline-flex;
+        width:min(250px,100%);
+        min-height:48px;
+        align-items:center;
+        justify-content:center;
+        margin:0!important;
+    }
+    .home-cta .container>div:last-child>a:last-child{
+        border:1px solid #ffffff66;
+        border-radius:6px;
+    }
+    .store-assurances .container{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:22px 14px;
+    }
+    .store-assurances .container>div{
+        display:grid;
+        grid-template-columns:32px minmax(0,1fr);
+        align-items:center;
+        justify-content:stretch;
+        width:100%;
+        min-width:0;
+        padding:0 10px;
+        gap:10px;
+    }
+    .store-assurances .container>div>i{
+        width:32px;
+        margin:0;
+        text-align:center;
+    }
+    .store-assurances .container>a{
+        grid-column:1/-1;
+        justify-self:center!important;
+        width:min(264px,100%);
+        margin-top:2px;
+    }
+
+    .about-stats .container{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+    .about-stats article{
+        min-width:0;
+        min-height:116px;
+        justify-content:center;
+        gap:12px;
+        padding:20px 12px;
+        border-right:0;
+        border-bottom:0!important;
+    }
+    .about-stats article:nth-child(odd){border-right:1px solid #e4edf6}
+    .about-stats article:nth-child(-n+2){border-bottom:1px solid #e4edf6!important}
+    .about-stats i{
+        width:32px;
+        flex:0 0 32px;
+        text-align:center;
+        font-size:25px;
+    }
+    .about-stats strong{font-size:20px;line-height:1.25;white-space:nowrap}
+    .about-stats span{font-size:10px;line-height:1.45}
+
+    .about-value-new-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+    }
+    .about-value-new-grid article{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        min-width:0;
+        min-height:208px;
+        padding:16px 13px;
+        text-align:center;
+    }
+    .about-value-new-grid .about-icon{
+        width:44px;
+        height:44px;
+        font-size:19px;
+    }
+    .about-value-new-grid h3{
+        min-height:0;
+        margin:13px 0 7px;
+        font-size:15px;
+        line-height:1.4;
+    }
+    .about-value-new-grid p{font-size:10px;line-height:1.6;text-align:center}
+
+    /* Tighter, consistent vertical rhythm for the About page on phones. */
+    .about-new-hero-grid{padding:46px 0;gap:30px}
+    .about-new-story{padding-top:52px;padding-bottom:52px;gap:32px}
+    .about-mission{padding:46px 0}
+    .about-mission-grid{gap:14px}
+    .about-values-new{padding-top:52px;padding-bottom:52px}
+    .about-process-new{padding:52px 0}
+    .about-center-head{margin-bottom:28px}
+    .about-new-cta{padding:44px 0}
+}
+
+/* Consistent, readable supporting text throughout the About page. */
+.about-kicker{font-size:12px}
+.about-floating-card b{font-size:12px}
+.about-floating-card small{font-size:11px;line-height:1.45}
+.about-stats span{font-size:11px;line-height:1.45}
+.about-new-copy>p,
+.about-story-content>p{font-size:15px;line-height:1.8}
+.about-mission article>span{font-size:11px}
+.about-mission p,
+.about-center-head>p,
+.about-value-new-grid p,
+.about-process-grid p,
+.about-new-cta p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+@media(max-width:560px){
+    .about-kicker{font-size:11px}
+    .about-new-copy>p,
+    .about-story-content>p{font-size:14px;line-height:1.75}
+    .about-mission p,
+    .about-center-head>p,
+    .about-value-new-grid p,
+    .about-process-grid p,
+    .about-new-cta p{font-size:12px;line-height:1.65}
+    .about-stats span{font-size:10px}
+}
+
+.about-new-cta a:last-child{font-size:13px}
+
+@media(max-width:560px){
+    .about-new-cta .container{
+        align-items:center;
+        gap:26px;
+        text-align:center;
+    }
+    .about-new-cta .container>div:first-child{width:100%}
+    .about-new-cta .container>div:last-child{
+        width:100%;
+        align-items:center;
+        gap:16px;
+    }
+    .about-new-cta a:first-child{
+        display:inline-flex;
+        width:min(220px,100%);
+        min-height:50px;
+        align-items:center;
+        justify-content:center;
+    }
+    .about-new-cta a:last-child{width:max-content;text-align:center}
+
+    footer{padding-top:34px}
+    footer .container{width:min(100% - 28px,1160px)}
+    .footer-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:26px 18px;
+    }
+    .footer-grid>div:first-child{
+        display:flex;
+        grid-column:1/-1;
+        flex-direction:column;
+        align-items:center;
+        padding-bottom:24px;
+        text-align:center;
+    }
+    .footer-logo{
+        width:min(210px,80%);
+        height:100px;
+        margin:0 auto 14px;
+    }
+    .footer-grid>div:first-child p{
+        max-width:330px;
+        margin:0;
+        font-size:11px;
+        line-height:1.6;
+    }
+    .footer-grid>div:nth-child(2),
+    .footer-grid>div:nth-child(3){
+        width:100%;
+        min-width:0;
+        padding:0 12px;
+        text-align:center;
+    }
+    .footer-grid>div:nth-child(3){
+        border-left:1px solid #ffffff20;
+    }
+    .footer-grid h4{margin:0 0 13px;font-size:14px}
+    .footer-grid p,.footer-grid a{
+        font-size:11px;
+        line-height:1.75;
+        overflow-wrap:anywhere;
+    }
+    .footer-grid>div:nth-child(3) p{margin:0 0 7px}
+    .copyright{
+        margin-top:30px;
+        padding:17px 20px;
+        font-size:10px;
+        line-height:1.6;
+    }
 }

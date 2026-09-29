@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('title','Tin tức & Sự kiện')
+@section('title','Kiến thức & Tin tức')
 @section('content')
-<section class="page-hero"><div class="container"><span class="eyebrow">Góc Thành Đạt</span><h1>Tin tức &amp; Sự kiện</h1><p>Câu chuyện mùa vụ, kiến thức nông sản và những hoạt động mới nhất.</p></div></section>
+<section class="page-hero"><div class="container"><span class="eyebrow">Góc chia sẻ</span><h1>Kiến thức &amp; Tin tức</h1><p>Câu chuyện mùa vụ, kiến thức nông sản và những hoạt động mới nhất.</p></div></section>
 <section class="section container">
     @if($posts->count())
         @php($featured=$posts->first())

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', $product->name)
 @section('content')
-<style>.order-phone-link{display:flex;align-items:center;justify-content:center;width:100%;margin:24px 0 25px;padding:14px 22px;border-radius:4px;background:linear-gradient(135deg,#1762dd,#347cf0);color:#fff;font-size:16px;box-shadow:0 7px 18px #2366d826}.order-phone-link:hover{background:linear-gradient(135deg,#174fae,#286de2);color:#fff}</style>
+<style>.order-phone-link{display:flex;align-items:center;justify-content:center;width:100%;margin:24px 0 25px;padding:14px 22px;border-radius:4px;background:#ef7424;color:#fff;font-size:16px;box-shadow:0 7px 18px #ef742438}.order-phone-link:hover{background:#d85f16;color:#fff}</style>
 <div class="container breadcrumb"><a href="{{ route('home') }}">Trang chủ</a> / <a href="{{ route('products.index') }}">Sản phẩm</a> / {{ $product->name }}</div>
 <section class="container detail">
     <div class="gallery"><div class="main-photo">@if($product->primary_image)<img id="mainImage" src="{{ $product->primary_image->url }}" alt="{{ $product->name }}">@else<span><i class="fa-solid fa-leaf"></i></span>@endif</div><div class="thumbs">@foreach($product->media as $image)<button data-image="{{ $image->url }}"><img src="{{ $image->url }}" alt="{{ $image->alt_text }}"></button>@endforeach</div></div>

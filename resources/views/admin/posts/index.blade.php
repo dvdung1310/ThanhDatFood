@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Tin tức & Sự kiện')
+@section('title','Kiến thức & Tin tức')
 @section('content')
 <style>
     .post-filters{display:grid;grid-template-columns:minmax(240px,1fr) 170px 170px 150px auto auto;gap:12px;align-items:end;margin-bottom:22px}
@@ -10,7 +10,7 @@
     @media(max-width:1000px){.post-filters{grid-template-columns:1fr 1fr 1fr}.post-filters label:first-child{grid-column:span 2}}
     @media(max-width:600px){.post-filters{grid-template-columns:1fr 1fr}.post-filters label:first-child{grid-column:span 2}.post-filters .btn{width:100%}}
 </style>
-<div class="admin-title"><div><h1>Tin tức &amp; Sự kiện</h1><p>Quản lý nội dung hiển thị trên website.</p></div><a class="btn" href="{{ route('admin.posts.create') }}">＋ Viết bài mới</a></div>
+<div class="admin-title"><div><h1>Kiến thức &amp; Tin tức</h1><p>Quản lý nội dung hiển thị trên website.</p></div><a class="btn" href="{{ route('admin.posts.create') }}">＋ Viết bài mới</a></div>
 <section class="panel">
     <form class="post-filters" method="get" action="{{ route('admin.posts.index') }}">
         <label>Tìm bài viết<input name="q" value="{{ request('q') }}" placeholder="Nhập tiêu đề bài viết..."></label>

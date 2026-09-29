@@ -61,7 +61,7 @@ document.querySelectorAll('.market-section .market-heading > a').forEach(link =>
 
 const mobileNavContainer = document.querySelector('.store-nav > .container');
 if (mobileNavContainer && !mobileNavContainer.querySelector('.mobile-nav-label')) {
-    mobileNavContainer.insertAdjacentHTML('afterbegin', '<span class="mobile-nav-label"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Menu điều hướng</span>');
+    mobileNavContainer.insertAdjacentHTML('afterbegin', '<span class="mobile-nav-label">Menu</span>');
 }
 
 const slugSource = document.querySelector('[data-slug-source]');
@@ -92,12 +92,26 @@ if (slugSource && slugTarget) {
 const richTextEditor = document.querySelector('#post-content, #product-description');
 if (richTextEditor) {
     Promise.all([import('ckeditor5'), import('ckeditor5/ckeditor5.css')]).then(([editor]) => {
-        const { ClassicEditor, Essentials, Paragraph, Heading, Bold, Italic, Underline, Link, List, BlockQuote, Table, TableToolbar, TableColumnResize, Alignment, Font, Image, ImageCaption, ImageStyle, ImageToolbar, ImageInsertViaUrl, ImageUpload, ImageResize } = editor;
+        const { ClassicEditor, Essentials, Paragraph, Heading, Bold, Italic, Underline, Link, List, BlockQuote, Table, TableToolbar, TableColumnResize, TableProperties, TableCellProperties, Alignment, Font, Indent, IndentBlock, Style, Image, ImageCaption, ImageStyle, ImageToolbar, ImageInsertViaUrl, ImageUpload, ImageResize } = editor;
         return ClassicEditor.create(richTextEditor, {
             licenseKey: 'GPL',
-            plugins: [Essentials, Paragraph, Heading, Bold, Italic, Underline, Link, List, BlockQuote, Table, TableToolbar, TableColumnResize, Alignment, Font, Image, ImageCaption, ImageStyle, ImageToolbar, ImageInsertViaUrl, ImageUpload, ImageResize],
-            toolbar: ['undo','redo','|','heading','|','bold','italic','underline','fontColor','fontBackgroundColor','|','alignment','bulletedList','numberedList','|','link','insertTable','uploadImage','insertImageViaUrl','blockQuote'],
-            table: { contentToolbar: ['tableColumn','tableRow','mergeTableCells'] },
+            plugins: [Essentials, Paragraph, Heading, Bold, Italic, Underline, Link, List, BlockQuote, Table, TableToolbar, TableColumnResize, TableProperties, TableCellProperties, Alignment, Font, Indent, IndentBlock, Style, Image, ImageCaption, ImageStyle, ImageToolbar, ImageInsertViaUrl, ImageUpload, ImageResize],
+            toolbar: {
+                items: ['undo','redo','|','heading','fontSize','style','|','bold','italic','underline','fontColor','fontBackgroundColor','|','alignment','outdent','indent','bulletedList','numberedList','|','link','insertTable','uploadImage','insertImageViaUrl','blockQuote'],
+                shouldNotGroupWhenFull: false
+            },
+            fontSize: {
+                options: [12, 14, 'default', 18, 20, 24, 28, 32],
+                supportAllValues: false
+            },
+            style: {
+                definitions: [
+                    { name: 'Giãn dòng gọn', element: 'p', classes: ['line-spacing-compact'] },
+                    { name: 'Giãn dòng 1.5', element: 'p', classes: ['line-spacing-relaxed'] },
+                    { name: 'Giãn dòng 2.0', element: 'p', classes: ['line-spacing-loose'] }
+                ]
+            },
+            table: { contentToolbar: ['tableColumn','tableRow','mergeTableCells','tableProperties','tableCellProperties'] },
             image: {
                 resizeUnit: '%',
                 resizeOptions: [
@@ -106,7 +120,7 @@ if (richTextEditor) {
                     { name: 'resizeImage:50', value: '50', label: '50%' },
                     { name: 'resizeImage:25', value: '25', label: '25%' }
                 ],
-                toolbar: ['imageTextAlternative','toggleImageCaption','imageStyle:inline','imageStyle:block','imageStyle:side','|','resizeImage']
+                toolbar: ['imageTextAlternative','toggleImageCaption','imageStyle:alignBlockLeft','imageStyle:alignCenter','imageStyle:alignBlockRight','|','resizeImage']
             },
             link: { addTargetToExternalLinks: true },
             placeholder: 'Nhập nội dung bài viết...'

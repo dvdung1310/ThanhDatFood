@@ -9,9 +9,9 @@
     .post-content h2,.post-content h3{scroll-margin-top:110px}
     @media(max-width:560px){.post-toc{padding:18px 16px}.post-toc li.toc-level-3{margin-left:10px}}
 </style>
-<div class="container breadcrumb"><a href="{{ route('home') }}">Trang chủ</a> / <a href="{{ route('news.index') }}">Tin tức &amp; Sự kiện</a> / {{ Str::limit($post->title,55) }}</div>
+<div class="container breadcrumb"><a href="{{ route('home') }}">Trang chủ</a> / <a href="{{ route('news.index') }}">Kiến thức &amp; Tin tức</a> / {{ Str::limit($post->title,55) }}</div>
 <article class="container post-detail">
-    <header><span class="eyebrow">Tin tức &amp; Sự kiện</span><h1>{{ $post->title }}</h1><p class="post-lead">{{ $post->excerpt }}</p><div class="post-meta"><span>{{ $post->published_at->format('d/m/Y') }}</span><span>Người đăng: {{ $post->author?->name ?: 'Thành Đạt' }}</span></div></header>
+    <header><span class="eyebrow">Kiến thức &amp; Tin tức</span><h1>{{ $post->title }}</h1><p class="post-lead">{{ $post->excerpt }}</p><div class="post-meta"><span>{{ $post->published_at->format('d/m/Y') }}</span><span>Người đăng: {{ $post->author?->name ?: 'Thành Đạt' }}</span></div></header>
     @if($post->featuredImage)<figure><img src="{{ $post->featuredImage->url }}" alt="{{ $post->featuredImage->alt_text ?: $post->title }}"></figure>@endif
     <nav class="post-toc" id="post-toc" aria-label="Mục lục bài viết" hidden><h2>Mục lục bài viết</h2><ol></ol></nav>
     <div class="post-content ck-content" id="post-content-detail">{!! $post->content !!}</div>
